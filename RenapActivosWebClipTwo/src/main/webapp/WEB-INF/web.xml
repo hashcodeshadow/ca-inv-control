@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<servlet>
+		<servlet-name>Servlet Service Broker</servlet-name>
+		<servlet-class>com.renap.service.ServiceBrokerJS</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Servlet Service Broker</servlet-name>
+		<url-pattern>/service/*</url-pattern>
+	</servlet-mapping>
+        
+	<servlet>
+		<servlet-name>BrokerSwitch</servlet-name>
+		<servlet-class>com.renap.service.ServiceBrokerSwitchJS</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>BrokerSwitch</servlet-name>
+		<url-pattern>/serviceSwitch/*</url-pattern>
+	</servlet-mapping>
+</web-app>
